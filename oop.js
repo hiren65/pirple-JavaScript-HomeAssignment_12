@@ -33,10 +33,17 @@ the parent class to the child class, and then specializing it.
 Note: JavaScript does not detect the child class prototype.constructor see Object:prototype property,
 so we must state that manually.
  */
-//dog is instant of Mammal, it has all properties and method inherits from Mammal.
+//dog is instant of Mammal, it has all properties and method from Mammal.
 console.log(`Mammal name is ${dog.name} \n It's life span ${dog.lifeSpan} years \n It is ${dog.diet}`);
 // call function inherited from Mammal
 dog.voice();
+//here inheritance from Mmmal
+function Man(name,lifeSpan,diet, isIntaligennt){
+    Mammal.call(this,name,lifeSpan,diet);
+    this.isteligent = isIntaligennt;
+}
+
+
 /*
 Prototype-based programming
 Prototype-based programming is a style of object-oriented programming in which classes are not present,
