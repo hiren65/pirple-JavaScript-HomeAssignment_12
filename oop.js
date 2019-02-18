@@ -12,7 +12,12 @@ class gets executed at the time of instantiation.
 The constructor is used to set the object’s properties or to call methods to prepare the object for use.
 Adding class methods and their definitions occurs using a different syntax described later in this article.
  */
-//Create Object as template, It's genrral properties and method for all mammals
+//The constructor is called at the moment of instantiation (the moment when the object instance is created).
+// The constructor is a method of the class. In JavaScript, the function serves as the constructor of the object;
+// therefore, there is no need to explicitly define a constructor method. Every action declared in the
+// class gets executed at the time of instantiation.
+// The constructor is used to set the object’s properties or to call methods to prepare the object for use.
+// Adding class methods and their definitions occurs using a different syntax described later in this article.
 function Mammal(name,lifeSpan,diet) {
          this.name = name;
          this.lifeSpan = lifeSpan;

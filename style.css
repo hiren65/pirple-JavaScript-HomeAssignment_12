@@ -1,0 +1,59 @@
+html{
+    width: 80%;
+    background-color: wheat;
+    margin: auto;
+    display: block;
+}
+h1{
+    text-align: center;
+}
+#wrapper{
+    display: grid;
+    grid-template-rows: 30px auto auto;
+    grid-template-columns: 75% 25%;
+    grid-gap: 10px;
+}
+.list{
+    font-weight: 600;
+    font-size: 1em;
+    cursor: pointer;
+    color: deeppink;
+}
+#ul0{
+    margin: 5px;
+    border: red 1px solid;
+    background-color: darkkhaki;
+    border-radius: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.box01{
+    font-size: 21px;
+
+}
+#box1{
+    background-color: beige;
+    display: block;
+    border: 1px black solid;
+    grid-column: 1/2;
+    margin: auto;
+    padding: 10px;
+}
+#box2{
+    grid-column: 2/3;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+h2{
+    text-align: center;
+}
+span{
+    font-family: Algerian, serif;
+}
+
+.code{
+    background-color: antiquewhite;
+    color:black;
+    padding: 5px;
+}

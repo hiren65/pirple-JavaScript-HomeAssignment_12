@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OOP in JavaScript</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <h1>What is Object Oriented Programming </h1>
+    <div id="wrapper">
+        <div id="box1" class="encloser">
+            <h2>Object Oriented Programming</h2>
+            <div class="encloser01">
+                <span>What Is OOP Programming?</span>
+                Earlier before at the beginning pure logic was used in software development in procedural programing.
+                As for example suppose we have to store 5 peoples personal details in programme.
+                it can be used to do,
+                <pre>
+                var name1 = "richard"
+
+                var address1 = "29 morgan street parkVille 2345"
+
+                var gender1 = male
+                </pre>
+                Likewise you have to mess with repetitive data assignment
+                and Also, the separation of data from method prevents a common
+                problem found in older linear software languages.
+                If a bug appears in a linear code, it can be translated through
+                a system and create masses of hard-to-trace errors. Conversely,
+                an OOP program, with its separation of method and data, is not
+                susceptible to such proliferated errors.
+                One of the great benefits of OOP is that of scalability,
+                with objects and definitions having no finite limitation.
+                <h2>Defination:</h2>
+                It's kind of structure or can say template object that can be
+                used for many time so through it you can do to manipulate data,
+                help store data, retrieve and help to view data through MVC
+                model.It's collection of method and variables. It is a blueprint
+                that defines the data and behavior of a type.
+                <span> why would you use it?</span><br>
+
+                One of the great benefits of OOP is that of scalability,
+                with objects and definitions having no finite limitation.
+                Also, the separation of data from method prevents a common
+                problem found in older linear software languages.
+                If a bug appears in a linear code, it can be translated through
+                a system and create masses of hard-to-trace errors.
+                Conversely, an OOP program, with its separation of method and
+                data, is not susceptible to such proliferated errors.
+                many javascript projects are written using a functional,
+                or event-driven design pattern. <br>
+                <span> In which cases would an OOP pattern be a better choice?</span><br>
+
+                Object Oriented Programming (OOP) refers to using
+                self-contained pieces of code to develop applications. We call
+                these self-contained pieces of code objects, better known as
+                Classes in most OOP programming languages and Functions in
+                JavaScript. We use objects as building blocks for our
+                applications. Building applications with objects allows us to
+                adopt some valuable techniques, namely, Inheritance
+                (objects can inherit features from other objects),
+                Polymorphism (objects can share the same interface—how they
+                are accessed and used—while their underlying implementation
+                of the interface may differ), and Encapsulation (each object
+                is responsible for specific tasks).
+                In JavaScript, objects can encapsulate functionality and
+                inherit methods and properties from other objects, so
+
+                <h2>Object Oriented Programming + Event-Driven Programming</h2>
+
+                The last thing I want to touch on here is the combination of
+                the Object Oriented and Event-driven programming paradigms.
+                These two make for a very valuable combination in a wide
+                variety of situations and I think it can be beneficial to
+                understand and conceptualize why.
+
+                The Object Oriented approach promotes the idea that all
+                behavior of an individual unit (or object) be handled from
+                code within that unit. Using this approach, applications are
+                built with many different units that all speak to and interact
+                with each other.
+            </div>
+            <h2>The Constructor</h2>
+            <div class="encloser01">
+                The constructor is called at the moment of instantiation (the moment when the object instance is created).
+                The constructor is a method of the class. In JavaScript, the function serves as the constructor of the object;
+                therefore, there is no need to explicitly define a constructor method. Every action declared in the
+                class gets executed at the time of instantiation.
+                The constructor is used to set the object’s properties or to call methods to prepare the object for use.
+                Adding class methods and their definitions occurs using a different syntax described later in this article.<br>
+                <span> Adding class methods and their definitions occurs using a different syntax described later in this article.</span>
+               <br>
+                <pre class="code">
+                    function Mammal(name,lifeSpan,diet) {
+                    this.name = name;
+                    this.lifeSpan = lifeSpan;
+                    this.diet = diet;
+                    this.voice = function () {
+                           console.log(`Mammal ${this.name} can make voice !!`);
+                            };
+                    }
+                </pre>
+                <span>Instantiate simple Mammal object</span>
+                <pre class="code">let dog = new Mammal("Dog",15,"omnivores");</pre>
+                <h2>Inheritance</h2>
+                <div class="encloser01">
+                    Inheritance is a way to create a class as a specialized version of one or more classes (
+                    JavaScript only supports single class inheritance). The specialized class is commonly called the child,
+                    and the other class is commonly called the parent. In JavaScript you do this by assigning an instance of
+                    the parent class to the child class, and then specializing it.
+                    Note: JavaScript does not detect the child class prototype.constructor see Object:prototype property,
+                    so we must state that manually.
+                </div>
+                <span>dog is instant of Mammal, it has all properties and method from Mammal.</span>
+                <pre class="code">
+                    console.log(`Mammal name is ${dog.name} \n
+                    It's life span ${dog.lifeSpan} years \n It is ${dog.diet}`);
+                </pre>
+                <span>call function inherited from Mammal</span>
+                <pre class="code">
+                    dog.voice();
+                    //here inheritance from Mmmal
+                    function Man(name,lifeSpan,diet, isIntaligennt){
+                        Mammal.call(this,name,lifeSpan,diet);
+                        this.isteligent = isIntaligennt;
+                    }
+                </pre>
+                <div class="encloser01">
+                    Prototype-based programming
+                    Prototype-based programming is a style of object-oriented programming in which classes are not present,
+                    and behavior reuse (known as inheritance in class-based languages) is accomplished through a process of
+                    decorating existing objects which serve as prototypes.
+                    This model is also known as class-less, prototype-oriented, or instance-based programming.
+                    The original (and most canonical) example of a prototype-based language is the programming language Self
+                    developed by David Ungar and Randall Smith. However, the class-less programming style has recently grown
+                    increasingly popular, and has been adopted for programming languages such as JavaScript, Cecil,
+                    NewtonScript, Io, MOO, REBOL, Kevo, Squeak (when using the Viewer framework to manipulate Morphic
+                    components), and several others.1
+                </div>
+                <pre class="code">
+                    //you can add properties and methods later in main Object
+                    Mammal.prototype.habitat = "everywhere";
+                    //now check in dog object, it's habitat
+                    console.log(dog.habitat);
+                    // now change, later added property in Mammal and inherited in
+                    dog object
+                    dog.habitat = "Around human Habitat";
+
+                    console.log(dog.habitat);
+                    // Same way you can add in Mammal object a new method
+                    Mammal.prototype.swim = function () {
+                      console.log(`${this.name} can swim!!`);
+                    };
+                    dog.swim();
+                </pre>
+                <h2>Encapsulation</h2>
+                <div class="encloser01" >
+                    In the previous example, dog does not need to know how the Mammal class’s voice() method is
+                    implemented, but still can use that method; the dog class doesn’t need to explicitly define
+                    that method unless we want to change it. This is called encapsulation, by which every class inherits
+                    the methods of its parent and only needs to define things it wishes to change.
+                    Notes
+                    The techniques presented in this article to implement object-oriented programming are not the only
+                    ones that can be used in JavaScript, which is very flexible in terms of how object-oriented programming
+                    can be performed.
+                    Similarly, the techniques shown here do not use any language hacks,
+                    nor do they mimic other languages’ object theory implementations.
+                </div>
+            </div>
+        </div>
+        <div id="box2" class="encloser">
+            <ul id="ul0">
+                <li class="list">introducton</li>
+                <li class="list">Inheritance</li>
+                <li class="list">Prototype</li>
+            </ul>
+
+        </div>
+    </div>
+</body>
+</html>
