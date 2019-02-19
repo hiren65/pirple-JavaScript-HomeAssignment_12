@@ -10,12 +10,13 @@
     <div id="wrapper">
         <div id="box1" class="encloser">
             <h2>Object Oriented Programming</h2>
-            <div class="encloser01">
-                <span>What Is OOP Programming?</span>
-                Earlier before at the beginning pure logic was used in software development in procedural programing.
+            <div class="encloser01" id="intro">
+                <span>What Is OOP Programming?</span><br>
+                Historically, a program has been viewed as a logical procedure that takes input data,
+                processes it, and produces output data.
                 As for example suppose we have to store 5 peoples personal details in programme.
                 it can be used to do,
-                <pre>
+                <pre class="code">
                 var name1 = "richard"
 
                 var address1 = "29 morgan street parkVille 2345"
@@ -36,7 +37,7 @@
                 used for many time so through it you can do to manipulate data,
                 help store data, retrieve and help to view data through MVC
                 model.It's collection of method and variables. It is a blueprint
-                that defines the data and behavior of a type.
+                that defines the data and behavior of a type.<br>
                 <span> why would you use it?</span><br>
 
                 One of the great benefits of OOP is that of scalability,
@@ -49,7 +50,7 @@
                 data, is not susceptible to such proliferated errors.
                 many javascript projects are written using a functional,
                 or event-driven design pattern. <br>
-                <span> In which cases would an OOP pattern be a better choice?</span><br>
+                <span> In which cases would an OOP pattern be a better choice?</span><br><br>
 
                 Object Oriented Programming (OOP) refers to using
                 self-contained pieces of code to develop applications. We call
@@ -80,14 +81,14 @@
                 built with many different units that all speak to and interact
                 with each other.
             </div>
-            <h2>The Constructor</h2>
+            <h2 id="const">The Constructor</h2>
             <div class="encloser01">
                 The constructor is called at the moment of instantiation (the moment when the object instance is created).
                 The constructor is a method of the class. In JavaScript, the function serves as the constructor of the object;
                 therefore, there is no need to explicitly define a constructor method. Every action declared in the
                 class gets executed at the time of instantiation.
                 The constructor is used to set the object’s properties or to call methods to prepare the object for use.
-                Adding class methods and their definitions occurs using a different syntax described later in this article.<br>
+                Adding class methods and their definitions occurs using a different syntax.<br>
                 <span> Adding class methods and their definitions occurs using a different syntax described later in this article.</span>
                <br>
                 <pre class="code">
@@ -102,7 +103,7 @@
                 </pre>
                 <span>Instantiate simple Mammal object</span>
                 <pre class="code">let dog = new Mammal("Dog",15,"omnivores");</pre>
-                <h2>Inheritance</h2>
+                <h2 id="inh">Inheritance</h2>
                 <div class="encloser01">
                     Inheritance is a way to create a class as a specialized version of one or more classes (
                     JavaScript only supports single class inheritance). The specialized class is commonly called the child,
@@ -125,8 +126,8 @@
                         this.isteligent = isIntaligennt;
                     }
                 </pre>
-                <div class="encloser01">
-                    Prototype-based programming
+                <div class="encloser01" id="pro">
+                    <span>Prototype-based programming</span><br>
                     Prototype-based programming is a style of object-oriented programming in which classes are not present,
                     and behavior reuse (known as inheritance in class-based languages) is accomplished through a process of
                     decorating existing objects which serve as prototypes.
@@ -153,7 +154,7 @@
                     };
                     dog.swim();
                 </pre>
-                <h2>Encapsulation</h2>
+                <h2 id="enc">Encapsulation</h2>
                 <div class="encloser01" >
                     In the previous example, dog does not need to know how the Mammal class’s voice() method is
                     implemented, but still can use that method; the dog class doesn’t need to explicitly define
@@ -170,9 +171,11 @@
         </div>
         <div id="box2" class="encloser">
             <ul id="ul0">
-                <li class="list">introducton</li>
-                <li class="list">Inheritance</li>
-                <li class="list">Prototype</li>
+                <li class="list"><a href= "#intro">introducton</a>  </li>
+                <li class="list"><a href= "#const">constructor</a> </li>
+                <li class="list"><a href= "#inh">Inheritanance</a></li>
+                <li class="list"><a href= "#pro">Prototype</a></li>
+                <li class="list"><a href= "#enc">Incapsulation</a></li>
             </ul>
 
         </div>
